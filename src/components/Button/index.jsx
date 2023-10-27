@@ -1,8 +1,8 @@
 import { Container } from "./styles";
 
-export function Button({ title }) {
+export function Button({ title, type }) {
   return (
-    <Container>
+    <Container className={type}>
       {title}
     </Container>
   )

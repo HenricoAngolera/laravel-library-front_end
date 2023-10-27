@@ -15,6 +15,8 @@ export const Container = styled.div`
 
   padding: 2rem;
 
+  transition: 0.3s;
+
   > svg {
     font-size: 20rem;
     margin-inline: auto
@@ -37,5 +39,9 @@ export const Container = styled.div`
       align-items: center;
       gap: 0.3rem;
     }
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.COLORS.LIGHT_400};
   }
 `;

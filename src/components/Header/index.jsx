@@ -7,7 +7,7 @@ export function Header(){
     <Container>
       <div>
         <a>Home</a>
-        <Button title="Novo livro"/>
+        <Button title="Novo livro" type="new"/>
       </div>
     </Container>
   )
