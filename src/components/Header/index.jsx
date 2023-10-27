@@ -1,10 +1,14 @@
 import { Container } from "./styles";
 
+import { Button } from "../Button";
+
 export function Header(){
   return (
     <Container>
-      <a>Home</a>
-      <button>Novo livro</button>
+      <div>
+        <a>Home</a>
+        <Button title="Novo livro"/>
+      </div>
     </Container>
   )
 }

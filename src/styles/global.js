@@ -20,7 +20,7 @@ export default createGlobalStyle`
   }
   
   body, input, button, textarea {
-    font-family: ${({ theme }) => theme.FONTS.POPPINS};
+    font-family: ${({ theme }) => theme.FONTS.ROBOTO};
     font-size: 1.6rem;
     outline: none;
   }
