@@ -14,6 +14,23 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
+    
+    h1 {
+      text-align: center;
+      margin-block: 3rem;
+    }
+  }
+`;
+
+export const BooksWrapper = styled.section`
+  margin-inline: 3rem;
+
+  display: flex;
+  flex-direction: column;  
+  gap: 2rem;
+
+  > h2 {
+    font-size: 3rem;
   }
 
 `;
