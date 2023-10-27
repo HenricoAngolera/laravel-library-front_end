@@ -14,6 +14,8 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
+
+    overflow-x: auto;
     
     h1 {
       text-align: center;

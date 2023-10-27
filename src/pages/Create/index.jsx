@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Container } from "./styles";
 
 import { Header } from "../../components/Header";
@@ -5,12 +6,17 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
 export function Create() {
+  const navigate = useNavigate();
+
+  function handleBack() {
+    navigate(-1)
+  }
   return(
     <Container>
       <Header />
 
       <main>
-        <a>voltar</a>
+        <a onClick={handleBack}>voltar</a>
         <form>
           <h1>Cadastrar livro</h1>
           <Input type="text" labelText="Titulo:"/>
@@ -19,7 +25,7 @@ export function Create() {
           <Input type="text" labelText="Resenha do livro:"/>
         </form>
         <div>
-          <Button type="new" title="Cadastrar"/>
+          <Button decoration="new" title="Cadastrar"/>
         </div>
       </main>
     </Container>

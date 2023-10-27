@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Container } from "./styles";
 
 import { Header } from "../../components/Header";
@@ -5,12 +6,17 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 
 export function Update() {
+  const navigate = useNavigate();
+
+  function handleBack(){
+    navigate(-1);
+  }
   return(
     <Container>
       <Header />
 
       <main>
-        <a>voltar</a>
+        <a onClick={handleBack}>voltar</a>
         <form>
           <h1>Editar livro</h1>
           <Input type="text" labelText="Titulo:"/>
@@ -19,8 +25,8 @@ export function Update() {
           <Input type="text" labelText="Resenha do livro:"/>
         </form>
         <div>
-          <Button type="delete" title="Apagar"/>
-          <Button type="edit" title="Editar"/>
+          <Button decoration="delete" title="Apagar"/>
+          <Button decoration="edit" title="Editar"/>
 
         </div>
       </main>

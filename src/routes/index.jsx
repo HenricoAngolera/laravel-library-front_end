@@ -5,7 +5,7 @@ import { Home } from "../pages/Home";
 import { Update } from "../pages/Update";
 import { Details } from "../pages/Details";
 
-export function AppRoutes() {
+export function AllRoutes() {
   return (
     <BrowserRouter>
       <Routes>

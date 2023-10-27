@@ -15,6 +15,9 @@ export const Container = styled.div`
   main {
     grid-area: content;
 
+    overflow-x: auto;
+
+
     margin-inline: 2rem;
 
     a {

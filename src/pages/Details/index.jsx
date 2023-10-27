@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { AiOutlineStar } from "react-icons/ai";
 import { BsBook } from "react-icons/bs";
 
@@ -7,11 +8,20 @@ import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 
 export function Details() {
+  const navigate = useNavigate();
+
+  function handleEdit() {
+    navigate("/update/1");
+  }
+
+  function handleBack() {
+    navigate(-1)
+  }
   return(
     <Container>
       <Header/>
       <main>
-        <a>voltar</a>
+        <a onClick={handleBack}>voltar</a>
         <div className="data">
           <BsBook/>
           <h1>Titulo do livro</h1>
@@ -21,8 +31,8 @@ export function Details() {
           <small>data adição</small>
         </div>
         <div className="buttons">
-          <Button title="Apagar" type="delete"/>
-          <Button title="Editar" type="edit" />
+          <Button title="Apagar" decoration="delete"/>
+          <Button title="Editar" decoration="edit" onClick={handleEdit} />
         </div>
       </main>
     </Container>
