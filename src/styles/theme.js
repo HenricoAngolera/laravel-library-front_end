@@ -20,8 +20,7 @@ export default {
   },
   FONTS: {
     ROBOTO: "'Roboto', sans-serif",
-    POPPINS: "'Poppins', sans-serif",
-    DM_SANS: "'DM Sans', sans-serif;"
+    POPPINS: "'Poppins', sans-serif"
   },
   MEDIA: {
     DESKTOP: "min-width: 1024px"
