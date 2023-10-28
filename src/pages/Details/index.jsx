@@ -18,11 +18,21 @@ export function Details() {
   const [book, setBook] = useState(null);
 
   function handleEdit() {
-    navigate("/update/1");
+    navigate(`/update/${params.id}`);
   }
 
   function handleBack() {
     navigate(-1)
+  }
+
+  async function deleteBook() {
+    if(confirm("Tem certeza que quer excluir este livro?")) {
+      const response = await api.delete(`/${params.id}`);
+      if (response.data.message){
+        alert(response.data.message);
+      }
+      return navigate(-1);
+    }
   }
 
   useEffect(() => {
@@ -50,7 +60,7 @@ export function Details() {
           </div>
         }
         <div className="buttons">
-          <Button title="Apagar" decoration="delete"/>
+          <Button title="Apagar" decoration="delete" onClick={deleteBook}/>
           <Button title="Editar" decoration="edit" onClick={handleEdit} />
         </div>
       </main>
