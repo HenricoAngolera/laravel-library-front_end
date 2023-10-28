@@ -38,7 +38,6 @@ export function Details() {
   useEffect(() => {
     async function getBook() {
       const { data } = await api.get(`/${params.id}`);
-      console.log(data);
       setBook(data);
     }
 
