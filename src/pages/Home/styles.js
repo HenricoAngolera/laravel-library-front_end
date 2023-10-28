@@ -44,6 +44,7 @@ export const BooksWrapper = styled.section`
 
   @media(${({ theme }) => theme.MEDIA.DESKTOP}){
     flex-direction: row;
+    overflow-x: auto;
   }
 
 `;

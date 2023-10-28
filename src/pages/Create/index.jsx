@@ -21,6 +21,13 @@ export function Create() {
   }
 
   async function createBook() {
+    if (!titulo || titulo == "") { return alert("Precisa ter um titulo!") }
+    if (!autor || autor == "") { return alert("Precisa ter nome de um autor!")}
+    if (!classification || classification == "") { return alert("Precisa ter uma classificação!")}
+    if (!resenha || resenha == "") { return alert("Precisa ter uma resenha!")}
+
+    if (classification < 1 || classification > 5) { return alert ("A classificação deve ser entre 1 e 5.")}
+
     const response = await api.post("", {
       titulo,
       autor,

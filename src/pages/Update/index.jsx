@@ -34,6 +34,9 @@ export function Update() {
   }
 
   async function updateBook() {
+
+    if (classification < 1 || classification > 5) { return alert ("A classificação deve ser entre 1 e 5.")}
+    
     await api.put(`/${params.id}`, {
       titulo,
       autor,
