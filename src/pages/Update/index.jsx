@@ -35,8 +35,13 @@ export function Update() {
 
   async function updateBook() {
 
+    if (!titulo || titulo == "") { setTitulo(book.titulo) }
+    if (!autor || autor == "") { setAutor(book.autor)}
+    if (!classification || classification == "") { setClassification(book.classificacao)}
+    if (!resenha || resenha == "") { setResenha(book.resenha)}
+
     if (classification < 1 || classification > 5) { return alert ("A classificação deve ser entre 1 e 5.")}
-    
+
     await api.put(`/${params.id}`, {
       titulo,
       autor,
