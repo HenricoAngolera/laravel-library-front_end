@@ -22,6 +22,13 @@ export const Container = styled.div`
       margin-block: 3rem;
     }
   }
+  @media(${({ theme }) => theme.MEDIA.DESKTOP}){
+    > main {
+      h1 {
+        font-size: 6rem;
+      }
+    }
+  }
 `;
 
 export const BooksWrapper = styled.section`
@@ -33,6 +40,10 @@ export const BooksWrapper = styled.section`
 
   > h2 {
     font-size: 3rem;
+  }
+
+  @media(${({ theme }) => theme.MEDIA.DESKTOP}){
+    flex-direction: row;
   }
 
 `;

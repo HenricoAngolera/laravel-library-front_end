@@ -44,4 +44,8 @@ export const Container = styled.div`
   &:hover {
     background-color: ${({ theme }) => theme.COLORS.LIGHT_400};
   }
+
+  @media(${({ theme }) => theme.MEDIA.DESKTOP}) {
+    width: auto;
+  }
 `;
