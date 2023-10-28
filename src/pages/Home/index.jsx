@@ -13,14 +13,13 @@ export function Home() {
 
   const [books, setBooks] = useState([]);
 
-  function handleDetails() {
-    navigate("/details/1")
+  function handleDetails(id) {
+    navigate(`/details/${id}`)
   }
 
   async function getAllBooks() {
     const { data } = await api.get("");
     
-    console.log(data);
     setBooks(data);
   }
 
@@ -35,15 +34,12 @@ export function Home() {
         <h1>Bem vindo à JetBiblioteca</h1>
 
         <BooksWrapper>
-         
             <h2>Livros:</h2>
             {
               books && books.map((book) => (
-                <BookCard key={book.id} title={book.titulo} author={book.autor} classification={book.classificacao} onClick={handleDetails}/>
+                <BookCard key={book.id} title={book.titulo} author={book.autor} classification={book.classificacao} onClick={() => handleDetails(book.id)}/>
               ))
             }
-            
-            
         </BooksWrapper>
       </main>
     </Container>
